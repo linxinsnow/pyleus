@@ -19,5 +19,7 @@ def search_storm_cmd_path():
         exe_file = os.path.join(path, "storm")
         if is_exe(exe_file):
             return exe_file
-
+        jexe_file = os.path.join(path, "jstorm") #for jstorm build support
+        if is_exe(jexe_file):
+            return jexe_file
     return None
